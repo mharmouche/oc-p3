@@ -16,8 +16,6 @@ $font-defaut : serif;
     font-family: $font-texte , $font-defaut;
 }
 
-
-
 header{
     h1{
         font-family: $font-titre, $font-defaut;
@@ -28,9 +26,12 @@ header{
 .location{
     background-color: $couleur_grise;
     text-align: center;
-    padding: 30px;
-    border-top: solid;
-
+    padding: 20px;
+    /*replace border by shadow*/
+    box-shadow: 0px 5px 10px gainsboro inset;
+    i{
+        margin: 10px;
+    } 
 }
 
 .recherche{
@@ -42,6 +43,8 @@ header{
         border-radius: 40px;
         border: none;
         background-color: $couleur-primaire;
+        box-shadow: 10px 10px 10px gainsboro;
+        color: white;
         &:hover{
             background-color: $couleur-secondaire;
         }
@@ -49,25 +52,46 @@ header{
 
 }
 
-
-
 .fonctionnement{
     background-color: white;
     padding: 30px;
     ol{
-        padding-left: 20px;
+        font-weight: bold;
+        padding: 0px;
+        li{
+            box-shadow: 5px 5px 10px gainsboro;
+            border-radius: 20px;
+            padding: 30px;
+            background-color: $couleur_grise_claire;
+            margin-bottom: 20px;
+            margin-left: 0px;
+            list-style-position:inside;
+            &:nth-child(3){
+                background-color: $couleur-tertiaire;
+                i{
+                    color: $couleur-primaire;
+                }
+            }
+            
+        }
+        i{
+            width: 30px;
+        }
     }
 }
 
-.restaurants{
+.restaurants-section{
     background-color: $couleur_grise_claire;
     padding: 30px;
 
 }
 
 .restaurant{
+    background-color: white;
+    border-radius: 30px;
+    margin-bottom: 20px;
+
     a{
-        background-color: white;
         text-decoration: none;
         color: black;
         .description{
@@ -87,8 +111,9 @@ header{
     img{
         width: 100%;
         height: 200px;
-        border-radius: 30px;
-        padding-top: 20px;
+        object-fit: cover;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
     }
 
     .description{
@@ -106,6 +131,7 @@ footer{
     background-color: $couleur_noire_claire;
     color: white;
     text-align:left;
+    padding-bottom: 30px;
     div{
         padding-left: 30px;
     }
@@ -120,6 +146,10 @@ footer{
     a{
         text-decoration: none;
         color: white;
+        i{
+            width: 20px;
+            font-size: smaller;
+        }
     }
     li{
         padding-bottom: 10px;
