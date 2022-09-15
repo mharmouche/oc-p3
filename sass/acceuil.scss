@@ -16,8 +16,6 @@ $font-defaut : serif;
     font-family: $font-texte , $font-defaut;
 }
 
-
-
 header{
     h1{
         font-family: $font-titre, $font-defaut;
@@ -28,9 +26,12 @@ header{
 .location{
     background-color: $couleur_grise;
     text-align: center;
-    padding: 30px;
-    border-top: solid;
-
+    padding: 20px;
+    /*replace border by shadow*/
+    box-shadow: 0px 5px 10px gainsboro inset;
+    i{
+        margin: 10px;
+    } 
 }
 
 .recherche{
