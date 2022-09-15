@@ -2,6 +2,10 @@
 $couleur-primaire : #9356DC;
 $couleur-secondaire : #FF79DA;
 $couleur-tertiaire : #99E2D0;
+$couleur_grise : rgb(234,234,234);/*backgroung location sur la palette (234,234,234)*/
+$couleur_grise_claire : rgb(246, 246, 246);/*backgroung recherche et restaurants sur la palette (246,246,246)*/
+$couleur_noire_claire : rgb(53, 53, 53);/*backgroung Footer*/
+
 
 $font-texte : Roboto;
 $font-titre : Shrikhand;
@@ -11,7 +15,6 @@ $font-defaut : serif;
 *{
     font-family: $font-texte , $font-defaut;
 }
-
 
 
 header{
@@ -33,6 +36,20 @@ main{
         display: flex;
         padding-bottom: 10px;
     }
+
+    display: flex;
+    flex-direction: column;
+    button{
+        padding: 20px;
+        border-radius: 40px;
+        border: none;
+        background-color: $couleur-primaire;
+        box-shadow: 10px 10px 10px gainsboro;
+        color: white;
+        &:hover{
+            background-color: $couleur-secondaire;
+        }
+    }
 }
 
 
@@ -42,11 +59,11 @@ main{
 
 
 
-
 footer{
-    background-color: black;
+    background-color: $couleur_noire_claire;
     color: white;
     text-align:left;
+    padding-bottom: 30px;
     div{
         padding-left: 30px;
     }
@@ -61,6 +78,10 @@ footer{
     a{
         text-decoration: none;
         color: white;
+        i{
+            width: 20px;
+            font-size: smaller;
+        }
     }
     li{
         padding-bottom: 10px;

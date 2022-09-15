@@ -1,4 +1,7 @@
 /* variable couleur*/
+/*backgroung location sur la palette (234,234,234)*/
+/*backgroung recherche et restaurants sur la palette (246,246,246)*/
+/*backgroung Footer*/
 /* Font Roboto  */
 * {
   font-family: Roboto, serif;
@@ -19,16 +22,30 @@ img {
 
 main {
   padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
 main .entree, main .plat, main .dessert {
   display: flex;
   padding-bottom: 10px;
 }
+main button {
+  padding: 20px;
+  border-radius: 40px;
+  border: none;
+  background-color: #9356DC;
+  box-shadow: 10px 10px 10px gainsboro;
+  color: white;
+}
+main button:hover {
+  background-color: #FF79DA;
+}
 
 footer {
-  background-color: black;
+  background-color: rgb(53, 53, 53);
   color: white;
   text-align: left;
+  padding-bottom: 30px;
 }
 footer div {
   padding-left: 30px;
@@ -44,6 +61,10 @@ footer ul {
 footer a {
   text-decoration: none;
   color: white;
+}
+footer a i {
+  width: 20px;
+  font-size: smaller;
 }
 footer li {
   padding-bottom: 10px;
