@@ -80,15 +80,18 @@ header{
     }
 }
 
-.restaurants{
+.restaurants-section{
     background-color: $couleur_grise_claire;
     padding: 30px;
 
 }
 
 .restaurant{
+    background-color: white;
+    border-radius: 30px;
+    margin-bottom: 20px;
+
     a{
-        background-color: white;
         text-decoration: none;
         color: black;
         .description{
@@ -108,8 +111,9 @@ header{
     img{
         width: 100%;
         height: 200px;
-        border-radius: 30px;
-        padding-top: 20px;
+        object-fit: cover;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
     }
 
     .description{
