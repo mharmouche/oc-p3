@@ -22,10 +22,23 @@ img {
 
 main {
   padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
 main .entree, main .plat, main .dessert {
   display: flex;
   padding-bottom: 10px;
+}
+main button {
+  padding: 20px;
+  border-radius: 40px;
+  border: none;
+  background-color: #9356DC;
+  box-shadow: 10px 10px 10px gainsboro;
+  color: white;
+}
+main button:hover {
+  background-color: #FF79DA;
 }
 
 footer {

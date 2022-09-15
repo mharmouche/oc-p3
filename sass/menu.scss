@@ -17,8 +17,6 @@ $font-defaut : serif;
 }
 
 
-
-
 header{
     display: flex;
     align-items: center;
@@ -38,8 +36,21 @@ main{
         display: flex;
         padding-bottom: 10px;
     }
-}
 
+    display: flex;
+    flex-direction: column;
+    button{
+        padding: 20px;
+        border-radius: 40px;
+        border: none;
+        background-color: $couleur-primaire;
+        box-shadow: 10px 10px 10px gainsboro;
+        color: white;
+        &:hover{
+            background-color: $couleur-secondaire;
+        }
+    }
+}
 
 
 
