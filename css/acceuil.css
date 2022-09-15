@@ -45,7 +45,26 @@ header h1 {
   padding: 30px;
 }
 .fonctionnement ol {
-  padding-left: 20px;
+  font-weight: bold;
+  padding: 0px;
+}
+.fonctionnement ol li {
+  box-shadow: 5px 5px 10px gainsboro;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: rgb(246, 246, 246);
+  margin-bottom: 20px;
+  margin-left: 0px;
+  list-style-position: inside;
+}
+.fonctionnement ol li:nth-child(3) {
+  background-color: #99E2D0;
+}
+.fonctionnement ol li:nth-child(3) i {
+  color: #9356DC;
+}
+.fonctionnement ol i {
+  width: 30px;
 }
 
 .restaurants {

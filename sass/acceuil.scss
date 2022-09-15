@@ -52,13 +52,31 @@ header{
 
 }
 
-
-
 .fonctionnement{
     background-color: white;
     padding: 30px;
     ol{
-        padding-left: 20px;
+        font-weight: bold;
+        padding: 0px;
+        li{
+            box-shadow: 5px 5px 10px gainsboro;
+            border-radius: 20px;
+            padding: 30px;
+            background-color: $couleur_grise_claire;
+            margin-bottom: 20px;
+            margin-left: 0px;
+            list-style-position:inside;
+            &:nth-child(3){
+                background-color: $couleur-tertiaire;
+                i{
+                    color: $couleur-primaire;
+                }
+            }
+            
+        }
+        i{
+            width: 30px;
+        }
     }
 }
 
