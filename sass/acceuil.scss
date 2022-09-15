@@ -107,6 +107,7 @@ footer{
     background-color: $couleur_noire_claire;
     color: white;
     text-align:left;
+    padding-bottom: 30px;
     div{
         padding-left: 30px;
     }
@@ -121,6 +122,10 @@ footer{
     a{
         text-decoration: none;
         color: white;
+        i{
+            width: 20px;
+            font-size: smaller;
+        }
     }
     li{
         padding-bottom: 10px;
