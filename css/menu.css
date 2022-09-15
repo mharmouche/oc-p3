@@ -1,0 +1,41 @@
+/*normamize*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+/* variable couleur*/
+/* font family*/
+@import url("http://fonts.cdnfonts.com/css/shrikhand");
+@import url("http://fonts.cdnfonts.com/css/roboto");
+/* Font Raleway  */
+* {
+  font-family: Roboto, serif;
+}
+
+header h1 {
+  font-family: Shrikhand, serif;
+  text-align: center;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: left;
+}
+footer div {
+  padding-left: 30px;
+}
+footer h2 {
+  font-family: Shrikhand, serif;
+  padding-top: 20px;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer li {
+  padding-bottom: 10px;
+}
+
+/*# sourceMappingURL=menu.css.map */
