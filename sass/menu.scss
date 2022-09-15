@@ -27,9 +27,14 @@ img{
     width:100%
 }
 
-.entree, .plat, .dessert{
-    display: flex;
+main{
+    padding: 30px;
+    .entree, .plat, .dessert{
+        display: flex;
+        padding-bottom: 10px;
+    }
 }
+
 
 
 

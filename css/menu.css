@@ -17,8 +17,12 @@ img {
   width: 100%;
 }
 
-.entree, .plat, .dessert {
+main {
+  padding: 30px;
+}
+main .entree, main .plat, main .dessert {
   display: flex;
+  padding-bottom: 10px;
 }
 
 footer {
