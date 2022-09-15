@@ -1,4 +1,7 @@
 /* variable couleur*/
+/*backgroung location sur la palette (234,234,234)*/
+/*backgroung recherche et restaurants sur la palette (246,246,246)*/
+/*backgroung Footer*/
 /* Font Roboto  */
 * {
   font-family: Roboto, serif;
@@ -9,23 +12,63 @@ header h1 {
   text-align: center;
 }
 
-.recherche {
+.location {
+  background-color: rgb(234, 234, 234);
   text-align: center;
+  padding: 30px;
+  border-top: solid;
 }
 
-main {
+.recherche {
+  text-align: center;
+  background-color: rgb(246, 246, 246);
+  padding: 30px;
+}
+.recherche button {
+  padding: 20px;
+  border-radius: 40px;
+  border: none;
+  background-color: #9356DC;
+}
+.recherche button:hover {
+  background-color: #FF79DA;
+}
+
+.fonctionnement {
+  background-color: white;
+  padding: 30px;
+}
+.fonctionnement ol {
+  padding-left: 20px;
+}
+
+.restaurants {
+  background-color: rgb(246, 246, 246);
   padding: 30px;
 }
 
-.location {
-  text-align: center;
+.restaurant a {
+  background-color: white;
+  text-decoration: none;
+  color: black;
 }
-
-.restaurant {
-  border-radius: 10px;
+.restaurant a .description {
+  padding: 20px;
+}
+.restaurant a .nom {
+  font-weight: bold;
+}
+.restaurant i {
+  color: black;
+}
+.restaurant i:hover {
+  background-color: #FF79DA;
 }
 .restaurant img {
-  max-width: 100%;
+  width: 100%;
+  height: 200px;
+  border-radius: 30px;
+  padding-top: 20px;
 }
 .restaurant .description {
   display: flex;
@@ -36,7 +79,7 @@ main {
 }
 
 footer {
-  background-color: black;
+  background-color: rgb(53, 53, 53);
   color: white;
   text-align: left;
 }
