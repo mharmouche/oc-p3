@@ -6,15 +6,12 @@ $couleur-primaire : #9356DC;
 $couleur-secondaire : #FF79DA;
 $couleur-tertiaire : #99E2D0;
 
-/* font family*/
-@import url('http://fonts.cdnfonts.com/css/shrikhand');
-@import url('http://fonts.cdnfonts.com/css/roboto');
 
 $font-texte : Roboto;
 $font-titre : Shrikhand;
 $font-defaut : serif;
 
-/* Font Raleway  */
+/* Font Roboto  */
 *{
     font-family: $font-texte , $font-defaut;
 }

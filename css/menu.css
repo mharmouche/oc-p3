@@ -1,10 +1,7 @@
 /*normamize*/
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 /* variable couleur*/
-/* font family*/
-@import url("http://fonts.cdnfonts.com/css/shrikhand");
-@import url("http://fonts.cdnfonts.com/css/roboto");
-/* Font Raleway  */
+/* Font Roboto  */
 * {
   font-family: Roboto, serif;
 }
