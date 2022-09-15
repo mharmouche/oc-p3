@@ -1,20 +1,13 @@
-/*normamize*/
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
-
 /* variable couleur*/
 $couleur-primaire : #9356DC;
 $couleur-secondaire : #FF79DA;
 $couleur-tertiaire : #99E2D0;
 
-/* font family*/
-@import url('http://fonts.cdnfonts.com/css/shrikhand');
-@import url('http://fonts.cdnfonts.com/css/roboto');
-
 $font-texte : Roboto;
 $font-titre : Shrikhand;
 $font-defaut : serif;
 
-/* Font Raleway  */
+/* Font Roboto  */
 *{
     font-family: $font-texte , $font-defaut;
 }
@@ -22,14 +15,25 @@ $font-defaut : serif;
 
 
 header{
+    display: flex;
+    align-items: center;
     h1{
         font-family: $font-titre, $font-defaut;
         text-align: center;
     }
 }
 
+img{
+    width:100%
+}
 
-
+main{
+    padding: 30px;
+    .entree, .plat, .dessert{
+        display: flex;
+        padding-bottom: 10px;
+    }
+}
 
 
 
