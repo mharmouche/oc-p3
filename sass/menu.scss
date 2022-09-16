@@ -18,11 +18,14 @@ $font-defaut : serif;
 
 
 header{
-    display: flex;
-    align-items: center;
     h1{
         font-family: $font-titre, $font-defaut;
-        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        i{
+            padding-left: 30px;
+            color: black;
+        }
     }
 }
 
