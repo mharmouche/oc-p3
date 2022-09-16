@@ -38,9 +38,37 @@ img{
 
 main{
     padding: 30px;
-    .entree, .plat, .dessert{
+    background-color: $couleur_grise;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    h2{
+        font-family: $font-titre , $font-defaut;
+    }
+
+    .entree, .plat, .dessert, .ndpi{
         display: flex;
-        padding-bottom: 10px;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: $couleur_grise_claire;
+        border-radius: 20px;
+        justify-content: space-between;
+        .ndp{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .nom{
+            font-weight: bold;
+        }
+        .prix{
+            font-weight: bold;
+            padding: 10px;
+        }
+        i{
+            padding: 10px;
+            
+        }
+        
     }
 
     display: flex;
