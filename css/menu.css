@@ -18,6 +18,8 @@ header h1 {
 
 img {
   width: 100%;
+  object-fit: cover;
+  height: 300px;
 }
 
 main {
@@ -28,6 +30,13 @@ main {
 main .entree, main .plat, main .dessert {
   display: flex;
   padding-bottom: 10px;
+}
+main a {
+  text-decoration: none;
+  color: black;
+}
+main i {
+  color: #99E2D0;
 }
 main button {
   padding: 20px;
