@@ -36,29 +36,41 @@ main {
 }
 main h2 {
   font-family: Shrikhand, serif;
-}
-main .entree, main .plat, main .dessert, main .ndpi {
   display: flex;
-  padding: 10px;
+  justify-content: space-between;
+}
+main .ndpi {
+  display: flex;
+  /*padding: 10px;*/
   margin-bottom: 10px;
   background-color: rgb(246, 246, 246);
   border-radius: 20px;
   justify-content: space-between;
 }
-main .entree .ndp, main .plat .ndp, main .dessert .ndp, main .ndpi .ndp {
+main .ndpi .ndp {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-main .entree .nom, main .plat .nom, main .dessert .nom, main .ndpi .nom {
+main .ndpi .nom {
   font-weight: bold;
 }
-main .entree .prix, main .plat .prix, main .dessert .prix, main .ndpi .prix {
+main .ndpi .prix {
   font-weight: bold;
   padding: 10px;
 }
-main .entree i, main .plat i, main .dessert i, main .ndpi i {
-  padding: 10px;
+main .ndpi i {
+  /*padding: 10px;*/
+  display: none;
+  width: 30px;
+}
+main .ndpi:hover i {
+  display: block;
+  color: white;
+  background-color: #99E2D0;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 main a {
   text-decoration: none;
