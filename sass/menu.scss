@@ -33,10 +33,12 @@ img{
     width:100%;
     object-fit: cover;
     height: 300px;
-
+    position: absolute;
+    z-index: -1;
 }
 
 main{
+    margin-top: +300px - 40px;
     padding: 30px;
     background-color: $couleur_grise;
     border-top-right-radius: 50px;
@@ -108,6 +110,7 @@ footer{
     color: white;
     text-align:left;
     padding-bottom: 30px;
+    margin-top: -20px;/*unwanted vertical margin between main section and footer*/
     div{
         padding-left: 30px;
     }

@@ -113,6 +113,7 @@ footer {
   color: white;
   text-align: left;
   padding-bottom: 30px;
+  margin-top: -20px; /*unwanted vertical margin between main section and footer*/
 }
 footer div {
   padding-left: 30px;
