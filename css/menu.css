@@ -21,9 +21,12 @@ img {
   width: 100%;
   object-fit: cover;
   height: 300px;
+  position: absolute;
+  z-index: -1;
 }
 
 main {
+  margin-top: 260px;
   padding: 30px;
   background-color: rgb(234, 234, 234);
   border-top-right-radius: 50px;
@@ -81,7 +84,7 @@ footer {
   color: white;
   text-align: left;
   padding-bottom: 30px;
-  margin-top: -20px; /*unwanted vertical margen between main section and footer*/
+  margin-top: -20px; /*unwanted vertical margin between main section and footer*/
 }
 footer div {
   padding-left: 30px;
