@@ -45,11 +45,13 @@ main{
     border-top-left-radius: 50px;
     h2{
         font-family: $font-titre , $font-defaut;
+        display: flex;
+        justify-content: space-between;
     }
 
-    .entree, .plat, .dessert, .ndpi{
+    .ndpi{
         display: flex;
-        padding: 10px;
+        /*padding: 10px;*/
         margin-bottom: 10px;
         background-color: $couleur_grise_claire;
         border-radius: 20px;
@@ -67,10 +69,21 @@ main{
             padding: 10px;
         }
         i{
-            padding: 10px;
-            
+            /*padding: 10px;*/
+            display: none;
+            width: 30px;
         }
-        
+        &:hover{
+            i{
+                display: block;
+                color: white;
+                background-color: $couleur-tertiaire;
+                height: 100%;
+                border-top-right-radius: 20px;        
+                border-bottom-right-radius: 20px; 
+    
+            }
+        } 
     }
 
     display: flex;

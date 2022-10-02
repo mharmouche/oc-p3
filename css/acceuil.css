@@ -1,7 +1,9 @@
+@charset "UTF-8";
 /* variable couleur*/
 /*backgroung location sur la palette (234,234,234)*/
 /*backgroung recherche et restaurants sur la palette (246,246,246)*/
 /*backgroung Footer*/
+/*pour partie déguster ... */
 /* Font Roboto  */
 * {
   font-family: Roboto, serif;
@@ -44,27 +46,39 @@ header h1 {
   background-color: white;
   padding: 30px;
 }
-.fonctionnement ol {
+.fonctionnement .etape {
+  background-color: rgb(246, 246, 246);
   font-weight: bold;
-  padding: 0px;
-}
-.fonctionnement ol li {
   box-shadow: 5px 5px 10px gainsboro;
   border-radius: 20px;
   padding: 30px;
-  background-color: rgb(246, 246, 246);
   margin-bottom: 20px;
   margin-left: 0px;
-  list-style-position: inside;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.fonctionnement ol li:nth-child(3) {
-  background-color: #99E2D0;
+.fonctionnement .etape:nth-child(4) {
+  background-color: rgb(245, 237, 255);
 }
-.fonctionnement ol li:nth-child(3) i {
+.fonctionnement .etape:nth-child(4) i {
   color: #9356DC;
 }
-.fonctionnement ol i {
+.fonctionnement .etape i {
   width: 30px;
+}
+.fonctionnement .etape .nombre {
+  background-color: #9356DC;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  position: absolute;
+  left: 15px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .restaurants-section {
@@ -76,6 +90,7 @@ header h1 {
   background-color: white;
   border-radius: 30px;
   margin-bottom: 20px;
+  box-shadow: 5px 5px 10px gainsboro;
 }
 .restaurant a {
   text-decoration: none;

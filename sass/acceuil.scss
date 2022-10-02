@@ -5,6 +5,7 @@ $couleur-tertiaire : #99E2D0;
 $couleur_grise : rgb(234,234,234);/*backgroung location sur la palette (234,234,234)*/
 $couleur_grise_claire : rgb(246, 246, 246);/*backgroung recherche et restaurants sur la palette (246,246,246)*/
 $couleur_noire_claire : rgb(53, 53, 53);/*backgroung Footer*/
+$couleur_fonctionnement : rgb(245, 237, 255);/*pour partie déguster ... */
 
 
 $font-texte : Roboto;
@@ -55,27 +56,43 @@ header{
 .fonctionnement{
     background-color: white;
     padding: 30px;
-    ol{
+    .etape{
+        background-color: $couleur_grise_claire;
         font-weight: bold;
-        padding: 0px;
-        li{
-            box-shadow: 5px 5px 10px gainsboro;
-            border-radius: 20px;
-            padding: 30px;
-            background-color: $couleur_grise_claire;
-            margin-bottom: 20px;
-            margin-left: 0px;
-            list-style-position:inside;
-            &:nth-child(3){
-                background-color: $couleur-tertiaire;
-                i{
-                    color: $couleur-primaire;
-                }
+    
+        box-shadow: 5px 5px 10px gainsboro;
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+        &:nth-child(4){
+            background-color: $couleur_fonctionnement;
+            i{
+                color: $couleur-primaire;
             }
-            
         }
+            
         i{
             width: 30px;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        .nombre{
+            background-color: $couleur-primaire;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            position: absolute;
+            left: 15px;
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            
         }
     }
 }
@@ -90,6 +107,7 @@ header{
     background-color: white;
     border-radius: 30px;
     margin-bottom: 20px;
+    box-shadow: 5px 5px 10px gainsboro;
 
     a{
         text-decoration: none;
