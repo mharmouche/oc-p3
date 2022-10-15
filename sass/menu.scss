@@ -58,30 +58,55 @@ main{
         justify-content: space-between;
         .ndp{
             width: 100%;
+            padding: 10px;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
+        }
+        .dp{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: 5px;
+
         }
         .nom{
             font-weight: bold;
         }
         .prix{
             font-weight: bold;
-            padding: 10px;
+        }
+        .choix{
+            display: none;
+            
         }
         i{
             /*padding: 10px;*/
             display: none;
-            width: 30px;
+            width: 50px;
         }
         &:hover{
+            .choix{
+                display: flex;
+                width: 50px;
+                align-content: center;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                font-weight: bolder;
+            }
             i{
-                display: block;
+                display: flex;
                 color: white;
                 background-color: $couleur-tertiaire;
                 height: 100%;
                 border-top-right-radius: 20px;        
                 border-bottom-right-radius: 20px; 
-    
+                align-content: center;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                font-weight: bolder;
             }
         } 
     }
