@@ -49,28 +49,52 @@ main .ndpi {
 }
 main .ndpi .ndp {
   width: 100%;
+  padding: 10px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+}
+main .ndpi .dp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 5px;
 }
 main .ndpi .nom {
   font-weight: bold;
 }
 main .ndpi .prix {
   font-weight: bold;
-  padding: 10px;
+}
+main .ndpi .choix {
+  display: none;
 }
 main .ndpi i {
   /*padding: 10px;*/
   display: none;
-  width: 30px;
+  width: 50px;
+}
+main .ndpi:hover .choix {
+  display: flex;
+  width: 50px;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-weight: bolder;
 }
 main .ndpi:hover i {
-  display: block;
+  display: flex;
   color: white;
   background-color: #99E2D0;
   height: 100%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-weight: bolder;
 }
 main a {
   text-decoration: none;

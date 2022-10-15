@@ -6,6 +6,8 @@ $couleur_grise : rgb(234,234,234);/*backgroung location sur la palette (234,234,
 $couleur_grise_claire : rgb(246, 246, 246);/*backgroung recherche et restaurants sur la palette (246,246,246)*/
 $couleur_noire_claire : rgb(53, 53, 53);/*backgroung Footer*/
 $couleur_fonctionnement : rgb(245, 237, 255);/*pour partie déguster ... */
+$couleur_nouveau : rgb(0, 135, 132);/*pour partie nouveay ... */
+$padding : 30px;
 
 
 $font-texte : Roboto;
@@ -56,45 +58,48 @@ header{
 .fonctionnement{
     background-color: white;
     padding: 30px;
-    .etape{
-        background-color: $couleur_grise_claire;
-        font-weight: bold;
-    
-        box-shadow: 5px 5px 10px gainsboro;
-        border-radius: 20px;
-        padding: 30px;
-        margin-bottom: 20px;
-        margin-left: 0px;
-        &:nth-child(4){
-            background-color: $couleur_fonctionnement;
+    .etapes{
+        .etape{
+            background-color: $couleur_grise_claire;
+            font-weight: bold;
+        
+            box-shadow: 5px 5px 10px gainsboro;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            margin-left: 0px;
+            &:nth-child(4){
+                background-color: $couleur_fonctionnement;
+                i{
+                    color: $couleur-primaire;
+                }
+            }
+                
             i{
-                color: $couleur-primaire;
+                width: 30px;
+            }
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+            .nombre{
+                background-color: $couleur-primaire;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                position: absolute;
+                left: 15px;
+
+                display: flex;
+                align-content: center;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                
             }
         }
-            
-        i{
-            width: 30px;
-        }
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        
-        .nombre{
-            background-color: $couleur-primaire;
-            width: 30px;
-            height: 30px;
-            border-radius: 100%;
-            position: absolute;
-            left: 15px;
-
-            display: flex;
-            align-content: center;
-            align-items: center;
-            text-align: center;
-            justify-content: center;
-            
-        }
     }
+    
 }
 
 .restaurants-section{
@@ -108,6 +113,23 @@ header{
     border-radius: 30px;
     margin-bottom: 20px;
     box-shadow: 5px 5px 10px gainsboro;
+    position: relative;
+    .nouveau{
+        position: absolute;
+        background-color: $couleur-tertiaire;
+        color: $couleur_nouveau;
+        right: 1.5*$padding ;
+        top: 0.5*$padding;
+        width : 100px;
+        height: 40px;
+        border-radius: 5px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-weight: bolder;
+    }
 
     a{
         text-decoration: none;
@@ -173,4 +195,36 @@ footer{
     li{
         padding-bottom: 10px;
     }
+}
+
+
+@media screen and (min-width: 992px){
+    .fonctionnement{
+        .etapes{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            & :nth-child(1){
+                .nombre{
+                    position:absolute;
+                    left: 15px;
+                }
+            }
+
+            & :nth-child(2){
+                .nombre{
+                    position:absolute;
+                    left: 250px;
+                }
+            }
+
+            & :nth-child(3){
+                .nombre{
+                    position:absolute;
+                    left: 500px;
+                }
+            }
+        } 
+    }
+     
 }
