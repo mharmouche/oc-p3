@@ -82,6 +82,14 @@ header h1 {
   justify-content: center;
 }
 
+@media screen and (min-width: 992px) {
+  .restaurant-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
 .restaurants-section {
   background-color: rgb(246, 246, 246);
   padding: 30px;
@@ -93,6 +101,11 @@ header h1 {
   margin-bottom: 20px;
   box-shadow: 5px 5px 10px gainsboro;
   position: relative;
+}
+@media screen and (min-width: 992px) {
+  .restaurant {
+    width: 48%;
+  }
 }
 .restaurant .nouveau {
   position: absolute;
@@ -159,6 +172,14 @@ footer ul {
   list-style-type: none;
   padding: 0;
 }
+@media screen and (min-width: 992px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 30px;
+  }
+}
 footer a {
   text-decoration: none;
   color: white;
@@ -171,24 +192,37 @@ footer li {
   padding-bottom: 10px;
 }
 
-@media screen and (min-width: 992px) {
-  .fonctionnement .etapes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .fonctionnement .etapes :nth-child(1) .nombre {
-    position: absolute;
-    left: 15px;
-  }
-  .fonctionnement .etapes :nth-child(2) .nombre {
-    position: absolute;
-    left: 250px;
-  }
-  .fonctionnement .etapes :nth-child(3) .nombre {
-    position: absolute;
-    left: 500px;
-  }
+/*
+@media screen and (min-width: 992px){
+    .fonctionnement{
+        .etapes{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            & :nth-child(1){
+                .nombre{
+                    position:absolute;
+                    left: 15px;
+                }
+            }
+
+            & :nth-child(2){
+                .nombre{
+                    position:absolute;
+                    left: 250px;
+                }
+            }
+
+            & :nth-child(3){
+                .nombre{
+                    position:absolute;
+                    left: 500px;
+                }
+            }
+        } 
+    }
+
 }
+*/
 
 /*# sourceMappingURL=acceuil.css.map */
