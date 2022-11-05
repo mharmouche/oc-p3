@@ -101,6 +101,14 @@ header{
     }
     
 }
+@media screen and (min-width: 992px){
+    .restaurant-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }   
+}
 
 .restaurants-section{
     background-color: $couleur_grise_claire;
@@ -109,6 +117,9 @@ header{
 }
 
 .restaurant{
+    @media screen and (min-width: 992px){
+        width: 48%; 
+    }
     background-color: white;
     border-radius: 30px;
     margin-bottom: 20px;
@@ -183,6 +194,13 @@ footer{
     ul {
         list-style-type: none;
         padding: 0;
+        @media screen and (min-width: 992px){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-right: 30px;
+            
+        }
     }
     a{
         text-decoration: none;
@@ -197,7 +215,7 @@ footer{
     }
 }
 
-
+/*
 @media screen and (min-width: 992px){
     .fonctionnement{
         .etapes{
@@ -228,3 +246,4 @@ footer{
     }
      
 }
+*/

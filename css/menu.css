@@ -39,7 +39,17 @@ main h2 {
   display: flex;
   justify-content: space-between;
 }
-main .ndpi {
+@media screen and (min-width: 992px) {
+  main .ndpi-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main .ndpi-list a {
+    width: 32%;
+  }
+}
+main .ndpi-list .ndpi {
   display: flex;
   /*padding: 10px;*/
   margin-bottom: 10px;
@@ -47,34 +57,34 @@ main .ndpi {
   border-radius: 20px;
   justify-content: space-between;
 }
-main .ndpi .ndp {
+main .ndpi-list .ndpi .ndp {
   width: 100%;
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-main .ndpi .dp {
+main .ndpi-list .ndpi .dp {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-top: 5px;
 }
-main .ndpi .nom {
+main .ndpi-list .ndpi .nom {
   font-weight: bold;
 }
-main .ndpi .prix {
+main .ndpi-list .ndpi .prix {
   font-weight: bold;
 }
-main .ndpi .choix {
+main .ndpi-list .ndpi .choix {
   display: none;
 }
-main .ndpi i {
+main .ndpi-list .ndpi i {
   /*padding: 10px;*/
   display: none;
   width: 50px;
 }
-main .ndpi:hover .choix {
+main .ndpi-list .ndpi:hover .choix {
   display: flex;
   width: 50px;
   align-content: center;
@@ -83,7 +93,7 @@ main .ndpi:hover .choix {
   justify-content: center;
   font-weight: bolder;
 }
-main .ndpi:hover i {
+main .ndpi-list .ndpi:hover i {
   display: flex;
   color: white;
   background-color: #99E2D0;
@@ -103,15 +113,20 @@ main a {
 main i {
   color: #99E2D0;
 }
-main button {
+main .boutton {
+  display: flex;
+  justify-content: center;
+}
+main .boutton button {
   padding: 20px;
   border-radius: 40px;
   border: none;
   background-color: #9356DC;
   box-shadow: 10px 10px 10px gainsboro;
   color: white;
+  width: 66%;
 }
-main button:hover {
+main .boutton button:hover {
   background-color: #FF79DA;
 }
 
@@ -132,6 +147,14 @@ footer h2 {
 footer ul {
   list-style-type: none;
   padding: 0;
+}
+@media screen and (min-width: 992px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 30px;
+  }
 }
 footer a {
   text-decoration: none;

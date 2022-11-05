@@ -48,67 +48,77 @@ main{
         display: flex;
         justify-content: space-between;
     }
-
-    .ndpi{
-        display: flex;
-        /*padding: 10px;*/
-        margin-bottom: 10px;
-        background-color: $couleur_grise_claire;
-        border-radius: 20px;
-        justify-content: space-between;
-        .ndp{
-            width: 100%;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .dp{
+    .ndpi-list{
+        @media screen and (min-width: 992px){
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            padding-top: 5px;
+            a{
+                width: 32%; 
+            }
+        }
 
-        }
-        .nom{
-            font-weight: bold;
-        }
-        .prix{
-            font-weight: bold;
-        }
-        .choix{
-            display: none;
-            
-        }
-        i{
+        .ndpi{
+            display: flex;
             /*padding: 10px;*/
-            display: none;
-            width: 50px;
-        }
-        &:hover{
-            .choix{
+            margin-bottom: 10px;
+            background-color: $couleur_grise_claire;
+            border-radius: 20px;
+            justify-content: space-between;
+            .ndp{
+                width: 100%;
+                padding: 10px;
                 display: flex;
-                width: 50px;
-                align-content: center;
-                align-items: center;
-                text-align: center;
-                justify-content: center;
-                font-weight: bolder;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .dp{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-top: 5px;
+
+            }
+            .nom{
+                font-weight: bold;
+            }
+            .prix{
+                font-weight: bold;
+            }
+            .choix{
+                display: none;
+                
             }
             i{
-                display: flex;
-                color: white;
-                background-color: $couleur-tertiaire;
-                height: 100%;
-                border-top-right-radius: 20px;        
-                border-bottom-right-radius: 20px; 
-                align-content: center;
-                align-items: center;
-                text-align: center;
-                justify-content: center;
-                font-weight: bolder;
+                /*padding: 10px;*/
+                display: none;
+                width: 50px;
             }
+            &:hover{
+                .choix{
+                    display: flex;
+                    width: 50px;
+                    align-content: center;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: center;
+                    font-weight: bolder;
+                }
+                i{
+                    display: flex;
+                    color: white;
+                    background-color: $couleur-tertiaire;
+                    height: 100%;
+                    border-top-right-radius: 20px;        
+                    border-bottom-right-radius: 20px; 
+                    align-content: center;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: center;
+                    font-weight: bolder;
+                }
         } 
+    }
     }
 
     display: flex;
@@ -123,17 +133,23 @@ main{
         color:#99E2D0;
     }
 
-    button{
-        padding: 20px;
-        border-radius: 40px;
-        border: none;
-        background-color: $couleur-primaire;
-        box-shadow: 10px 10px 10px gainsboro;
-        color: white;
-        &:hover{
-            background-color: $couleur-secondaire;
+    .boutton{
+        display: flex;
+        justify-content: center;
+        button{
+            padding: 20px;
+            border-radius: 40px;
+            border: none;
+            background-color: $couleur-primaire;
+            box-shadow: 10px 10px 10px gainsboro;
+            color: white;
+            &:hover{
+                background-color: $couleur-secondaire;
+            }
+            width: 66%;
         }
     }
+
 }
 
 
@@ -159,6 +175,13 @@ footer{
     ul {
         list-style-type: none;
         padding: 0;
+        @media screen and (min-width: 992px){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-right: 30px;
+            
+        }
     }
     a{
         text-decoration: none;
