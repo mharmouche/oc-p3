@@ -5,7 +5,27 @@ $couleur-tertiaire : #99E2D0;
 $couleur_grise : rgb(234,234,234);/*backgroung location sur la palette (234,234,234)*/
 $couleur_grise_claire : rgb(246, 246, 246);/*backgroung recherche et restaurants sur la palette (246,246,246)*/
 $couleur_noire_claire : rgb(53, 53, 53);/*backgroung Footer*/
+$couleur_degrade : linear-gradient( $couleur-primaire, $couleur-secondaire);
 
+/*rotation animation*/
+@keyframes rotation { 
+    0%{
+    transform: rotate(0deg);
+    }
+    100%{
+    
+    transform: rotate(360deg);
+    }
+}
+
+@keyframes replissage { 
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 $font-texte : Roboto;
 $font-titre : Shrikhand;
@@ -47,12 +67,29 @@ main{
         font-family: $font-titre , $font-defaut;
         display: flex;
         justify-content: space-between;
+        .coeur{
+            //background-image: $couleur_degrade;
+            ///background: $couleur_degrade;
+            //color: linear-gradient( $couleur-primaire, $couleur-secondaire);
+            //background-image: $couleur_degrade;
+            
+            &:hover{
+                -webkit-text-stroke: 1px transparent;
+                animation: replissage 1s ease-out;
+                background: linear-gradient(#FF79DA, #9356DC);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: bold;
+            }
+            
+        }
     }
     .ndpi-list{
         @media screen and (min-width: 992px){
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            flex-wrap: wrap;
             a{
                 width: 32%; 
             }
@@ -77,6 +114,11 @@ main{
                 flex-direction: row;
                 justify-content: space-between;
                 padding-top: 5px;
+                .detail{
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space:nowrap;
+                }
 
             }
             .nom{
@@ -87,14 +129,20 @@ main{
             }
             .choix{
                 display: none;
-                
+                            
+                i{
+                    /*padding: 10px;*/
+                    display: none;
+                    width: 50px;
+                    /*transform: rotate(0deg);
+                    transition-property: transform;*/
+                    /*transition-duration: 3000ms; */
+                }
+
             }
-            i{
-                /*padding: 10px;*/
-                display: none;
-                width: 50px;
-            }
+               
             &:hover{
+                
                 .choix{
                     display: flex;
                     width: 50px;
@@ -103,21 +151,30 @@ main{
                     text-align: center;
                     justify-content: center;
                     font-weight: bolder;
-                }
-                i{
-                    display: flex;
-                    color: white;
-                    background-color: $couleur-tertiaire;
-                    height: 100%;
-                    border-top-right-radius: 20px;        
-                    border-bottom-right-radius: 20px; 
-                    align-content: center;
-                    align-items: center;
-                    text-align: center;
-                    justify-content: center;
-                    font-weight: bolder;
+                  
+                
+                    i{
+                        animation-duration: 5s;
+                        animation-name: rotation;
+
+                        display: flex;
+                        color: white;
+                        background-color: $couleur-tertiaire;
+                        height: 100%;
+                        border-top-right-radius: 20px;        
+                        border-bottom-right-radius: 20px; 
+                        align-content: center;
+                        align-items: center;
+                        text-align: center;
+                        justify-content: center;
+                        font-weight: bolder;
+                        transform: rotate(0deg);
+                        /*transform: rotate(90deg);*/                        
+
+                    }
                 }
         } 
+
     }
     }
 
@@ -140,11 +197,13 @@ main{
             padding: 20px;
             border-radius: 40px;
             border: none;
-            background-color: $couleur-primaire;
+            background: $couleur_degrade;
+            opacity: 0.8;
             box-shadow: 10px 10px 10px gainsboro;
             color: white;
             &:hover{
-                background-color: $couleur-secondaire;
+                background : $couleur_degrade;
+                opacity: 1;
             }
             width: 66%;
         }
