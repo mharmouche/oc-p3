@@ -2,6 +2,23 @@
 /*backgroung location sur la palette (234,234,234)*/
 /*backgroung recherche et restaurants sur la palette (246,246,246)*/
 /*backgroung Footer*/
+/*rotation animation*/
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes replissage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* Font Roboto  */
 * {
   font-family: Roboto, serif;
@@ -39,11 +56,33 @@ main h2 {
   display: flex;
   justify-content: space-between;
 }
+main h2 .coeur:hover {
+  -webkit-text-stroke: 1px transparent;
+  animation: replissage 1s ease-out;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+main .souligne-part {
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+}
+main .souligne-part:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  bottom: 0;
+  left: 0%;
+  border-bottom: 3px solid #99E2D0;
+}
 @media screen and (min-width: 992px) {
   main .ndpi-list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   main .ndpi-list a {
     width: 32%;
@@ -69,6 +108,12 @@ main .ndpi-list .ndpi .dp {
   flex-direction: row;
   justify-content: space-between;
   padding-top: 5px;
+  overflow: hidden;
+}
+main .ndpi-list .ndpi .dp .detail {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 main .ndpi-list .ndpi .nom {
   font-weight: bold;
@@ -77,12 +122,19 @@ main .ndpi-list .ndpi .prix {
   font-weight: bold;
 }
 main .ndpi-list .ndpi .choix {
-  display: none;
+  transform: translateX(-50%, -50%);
+  transition: all 0.5s;
+  width: 0;
 }
-main .ndpi-list .ndpi i {
+main .ndpi-list .ndpi .choix i {
   /*padding: 10px;*/
   display: none;
   width: 50px;
+  /*transform: rotate(0deg);
+  transition-property: transform;*/
+  /*transition-duration: 3000ms; */
+  transform: rotate(0deg);
+  transition: all 0.5s;
 }
 main .ndpi-list .ndpi:hover .choix {
   display: flex;
@@ -92,19 +144,23 @@ main .ndpi-list .ndpi:hover .choix {
   text-align: center;
   justify-content: center;
   font-weight: bolder;
-}
-main .ndpi-list .ndpi:hover i {
-  display: flex;
-  color: white;
-  background-color: #99E2D0;
-  height: 100%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  background-color: #99E2D0;
+  transform: translateX(0);
+}
+main .ndpi-list .ndpi:hover .choix i {
+  animation-duration: 0.5s;
+  animation-name: rotation;
+  display: flex;
+  color: white;
+  height: 100%;
   align-content: center;
   align-items: center;
   text-align: center;
   justify-content: center;
   font-weight: bolder;
+  /*transform: rotate(90deg);*/
 }
 main a {
   text-decoration: none;
@@ -121,13 +177,16 @@ main .boutton button {
   padding: 20px;
   border-radius: 40px;
   border: none;
-  background-color: #9356DC;
-  box-shadow: 10px 10px 10px gainsboro;
+  background: linear-gradient(#9356DC, #FF79DA);
+  opacity: 0.8;
   color: white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 66%;
 }
 main .boutton button:hover {
-  background-color: #FF79DA;
+  box-shadow: 10px 5px 5px rgb(53, 53, 53);
+  background: linear-gradient(#9356DC, #FF79DA);
+  opacity: 1;
 }
 
 footer {

@@ -5,6 +5,7 @@ $couleur-tertiaire : #99E2D0;
 $couleur_grise : rgb(234,234,234);/*backgroung location sur la palette (234,234,234)*/
 $couleur_grise_claire : rgb(246, 246, 246);/*backgroung recherche et restaurants sur la palette (246,246,246)*/
 $couleur_noire_claire : rgb(53, 53, 53);/*backgroung Footer*/
+$couleur_degrade : linear-gradient( $couleur-primaire, $couleur-secondaire);
 $couleur_fonctionnement : rgb(245, 237, 255);/*pour partie déguster ... */
 $couleur_nouveau : rgb(0, 135, 132);/*pour partie nouveay ... */
 $padding : 30px;
@@ -13,6 +14,15 @@ $padding : 30px;
 $font-texte : Roboto;
 $font-titre : Shrikhand;
 $font-defaut : serif;
+
+@keyframes replissage { 
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 /* Font Roboto  */
 *{
@@ -41,6 +51,7 @@ header{
     text-align: center;
     background-color: $couleur_grise_claire;
     padding: 30px;
+    /*
     button{
         padding: 20px;
         border-radius: 40px;
@@ -50,6 +61,27 @@ header{
         color: white;
         &:hover{
             background-color: $couleur-secondaire;
+        }
+    }
+    */
+    .boutton{
+        display: flex;
+        justify-content: center;
+        button{
+            padding: 20px;
+            border-radius: 40px;
+            border: none;
+            background: $couleur_degrade;
+            opacity: 0.8;
+            //box-shadow: 10px 10px 10px gainsboro;
+            color: white;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            &:hover{
+                box-shadow: 10px 5px 5px $couleur_noire_claire;
+                background : $couleur_degrade;
+                opacity: 1;
+            }
+            width: 66%;
         }
     }
 
@@ -176,7 +208,21 @@ header{
     }
 }
 
-
+.coeur{
+    //background-image: $couleur_degrade;
+    ///background: $couleur_degrade;
+    //color: linear-gradient( $couleur-primaire, $couleur-secondaire);
+    //background-image: $couleur_degrade;
+    
+    &:hover{
+        -webkit-text-stroke: 1px transparent;
+        animation: replissage 1s ease-out;
+        background: linear-gradient(#FF79DA, #9356DC);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+    }
+}
 
 footer{
     background-color: $couleur_noire_claire;
