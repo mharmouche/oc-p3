@@ -64,6 +64,19 @@ main h2 .coeur:hover {
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
+main .souligne-part {
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+}
+main .souligne-part:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  bottom: 0;
+  left: 0%;
+  border-bottom: 3px solid #99E2D0;
+}
 @media screen and (min-width: 992px) {
   main .ndpi-list {
     display: flex;
@@ -95,6 +108,7 @@ main .ndpi-list .ndpi .dp {
   flex-direction: row;
   justify-content: space-between;
   padding-top: 5px;
+  overflow: hidden;
 }
 main .ndpi-list .ndpi .dp .detail {
   text-overflow: ellipsis;
@@ -108,7 +122,9 @@ main .ndpi-list .ndpi .prix {
   font-weight: bold;
 }
 main .ndpi-list .ndpi .choix {
-  display: none;
+  transform: translateX(-50%, -50%);
+  transition: all 0.5s;
+  width: 0;
 }
 main .ndpi-list .ndpi .choix i {
   /*padding: 10px;*/
@@ -117,6 +133,8 @@ main .ndpi-list .ndpi .choix i {
   /*transform: rotate(0deg);
   transition-property: transform;*/
   /*transition-duration: 3000ms; */
+  transform: rotate(0deg);
+  transition: all 0.5s;
 }
 main .ndpi-list .ndpi:hover .choix {
   display: flex;
@@ -126,22 +144,22 @@ main .ndpi-list .ndpi:hover .choix {
   text-align: center;
   justify-content: center;
   font-weight: bolder;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #99E2D0;
+  transform: translateX(0);
 }
 main .ndpi-list .ndpi:hover .choix i {
-  animation-duration: 5s;
+  animation-duration: 0.5s;
   animation-name: rotation;
   display: flex;
   color: white;
-  background-color: #99E2D0;
   height: 100%;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
   align-content: center;
   align-items: center;
   text-align: center;
   justify-content: center;
   font-weight: bolder;
-  transform: rotate(0deg);
   /*transform: rotate(90deg);*/
 }
 main a {
@@ -161,11 +179,12 @@ main .boutton button {
   border: none;
   background: linear-gradient(#9356DC, #FF79DA);
   opacity: 0.8;
-  box-shadow: 10px 10px 10px gainsboro;
   color: white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 66%;
 }
 main .boutton button:hover {
+  box-shadow: 10px 5px 5px rgb(53, 53, 53);
   background: linear-gradient(#9356DC, #FF79DA);
   opacity: 1;
 }

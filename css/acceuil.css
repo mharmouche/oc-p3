@@ -5,6 +5,14 @@
 /*backgroung Footer*/
 /*pour partie déguster ... */
 /*pour partie nouveay ... */
+@keyframes replissage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* Font Roboto  */
 * {
   font-family: Roboto, serif;
@@ -30,17 +38,38 @@ header h1 {
   text-align: center;
   background-color: rgb(246, 246, 246);
   padding: 30px;
+  /*
+  button{
+      padding: 20px;
+      border-radius: 40px;
+      border: none;
+      background-color: $couleur-primaire;
+      box-shadow: 10px 10px 10px gainsboro;
+      color: white;
+      &:hover{
+          background-color: $couleur-secondaire;
+      }
+  }
+  */
 }
-.recherche button {
+.recherche .boutton {
+  display: flex;
+  justify-content: center;
+}
+.recherche .boutton button {
   padding: 20px;
   border-radius: 40px;
   border: none;
-  background-color: #9356DC;
-  box-shadow: 10px 10px 10px gainsboro;
+  background: linear-gradient(#9356DC, #FF79DA);
+  opacity: 0.8;
   color: white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 66%;
 }
-.recherche button:hover {
-  background-color: #FF79DA;
+.recherche .boutton button:hover {
+  box-shadow: 10px 5px 5px rgb(53, 53, 53);
+  background: linear-gradient(#9356DC, #FF79DA);
+  opacity: 1;
 }
 
 .fonctionnement {
@@ -152,6 +181,15 @@ header h1 {
 }
 .restaurant .description note {
   text-align: center;
+}
+
+.coeur:hover {
+  -webkit-text-stroke: 1px transparent;
+  animation: replissage 1s ease-out;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 footer {

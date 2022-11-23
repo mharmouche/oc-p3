@@ -11,6 +11,7 @@ $couleur_degrade : linear-gradient( $couleur-primaire, $couleur-secondaire);
 @keyframes rotation { 
     0%{
     transform: rotate(0deg);
+    
     }
     100%{
     
@@ -84,6 +85,25 @@ main{
             
         }
     }
+
+    //  inspiré de la réponse dans :
+    //  https://stackoverflow.com/questions/23502675/css-underline-less-than-width-of-headline
+    .souligne-part {
+        display: inline-block;
+        padding-bottom: 5px;
+        position: relative;
+    }
+    .souligne-part:before{
+        content: "";
+        position: absolute;
+        width: 50px;
+        //height: 1px;
+        bottom: 0;
+        left: 0%;
+        border-bottom: 3px solid $couleur-tertiaire;
+    }
+
+
     .ndpi-list{
         @media screen and (min-width: 992px){
             display: flex;
@@ -114,6 +134,8 @@ main{
                 flex-direction: row;
                 justify-content: space-between;
                 padding-top: 5px;
+                //
+                overflow: hidden;
                 .detail{
                     text-overflow: ellipsis;
                     overflow: hidden;
@@ -127,8 +149,14 @@ main{
             .prix{
                 font-weight: bold;
             }
+            // rotation + slide
             .choix{
-                display: none;
+                transform: translateX(-50%, -50%);
+                transition: all .5s;
+                width: 0;
+                //display: none;
+                //width: 50px;
+
                             
                 i{
                     /*padding: 10px;*/
@@ -137,6 +165,8 @@ main{
                     /*transform: rotate(0deg);
                     transition-property: transform;*/
                     /*transition-duration: 3000ms; */
+                    transform: rotate(0deg);
+                    transition: all .5s;
                 }
 
             }
@@ -151,24 +181,30 @@ main{
                     text-align: center;
                     justify-content: center;
                     font-weight: bolder;
-                  
-                
+                    border-top-right-radius: 20px;        
+                    border-bottom-right-radius: 20px; 
+                    background-color: $couleur-tertiaire;
+
+                    
+                    transform: translateX(0);
+
+
                     i{
-                        animation-duration: 5s;
+                        animation-duration: 0.5s;
                         animation-name: rotation;
+                        //transform: rotate(720deg);
 
                         display: flex;
                         color: white;
-                        background-color: $couleur-tertiaire;
                         height: 100%;
-                        border-top-right-radius: 20px;        
-                        border-bottom-right-radius: 20px; 
+                        //border-top-right-radius: 20px;        
+                        //border-bottom-right-radius: 20px; 
                         align-content: center;
                         align-items: center;
                         text-align: center;
                         justify-content: center;
                         font-weight: bolder;
-                        transform: rotate(0deg);
+                        //transform: rotate(0deg);
                         /*transform: rotate(90deg);*/                        
 
                     }
@@ -199,9 +235,12 @@ main{
             border: none;
             background: $couleur_degrade;
             opacity: 0.8;
-            box-shadow: 10px 10px 10px gainsboro;
+            //box-shadow: 10px 10px 10px gainsboro;
             color: white;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);                
+            //box-shadow: 10px 5px 5px $couleur_noire_claire;
             &:hover{
+                box-shadow: 10px 5px 5px $couleur_noire_claire;
                 background : $couleur_degrade;
                 opacity: 1;
             }
