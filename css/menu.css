@@ -293,22 +293,30 @@ main .ndpi-list .ndpi .nom {
 main .ndpi-list .ndpi .prix {
   font-weight: bold;
 }
+@keyframes similitude {
+  0% {
+    transform: rotate(0deg);
+    transform: translateX(50px);
+  }
+  100% {
+    transform: rotate(0deg);
+    transform: translateX(0px);
+  }
+}
 main .ndpi-list .ndpi .choix {
-  transform: translateX(-50%, -50%);
-  transition: all 1s;
-  width: 0;
+  display: none;
 }
 main .ndpi-list .ndpi .choix i {
+  font-size: 25px;
   /*padding: 10px;*/
   display: none;
-  width: 50px;
   /*transform: rotate(0deg);
   transition-property: transform;*/
   /*transition-duration: 3000ms; */
-  transform: rotate(0deg);
-  transition: all 0.5s;
 }
 main .ndpi-list .ndpi:hover .choix {
+  animation-duration: 0.5s;
+  animation-name: similitude;
   display: flex;
   width: 50px;
   align-content: center;
@@ -319,7 +327,6 @@ main .ndpi-list .ndpi:hover .choix {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #99E2D0;
-  transform: translateX(0);
 }
 main .ndpi-list .ndpi:hover .choix i {
   animation-duration: 0.5s;
