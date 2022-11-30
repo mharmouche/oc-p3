@@ -15,6 +15,59 @@ $font-texte : Roboto;
 $font-titre : Shrikhand;
 $font-defaut : serif;
 
+/*loader*/
+// inspiré de la chaine grafikart : 
+// reference : https://grafikart.fr/tutoriels/loaders-animes-496
+.section{
+    position: absolute;
+    height: 100px;
+    min-height:100%;
+    min-width:100%;
+    z-index: 1;
+    background-color: rgba(141, 155, 155, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+  ////////////////////////
+
+.loader{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+  } 
+.loader-ring{
+    border-radius: 50px;
+    border: 6px solid rgba(255,255,255,0.4);
+
+}
+.loader-ring:after{
+    content: "";
+    position: absolute;
+    top: -6px; left: -6px;bottom: -6px; right: -6px;
+    border-radius: 50px;
+    border: 6px solid transparent;
+    // couleurs drapeau francais comme spécialité
+    border-top-color: #00F;
+    border-right-color: #fff;
+    border-bottom-color: #f00;
+    animation: spin 2s linear 0s 3; //2 fois de rotation durée 2 sec
+}
+
+@keyframes spin { 
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+  /* FIN Loaders */
+
 @keyframes replissage { 
     0%{
         opacity: 0;
