@@ -7,17 +7,34 @@
 /*pour partie nouveay ... */
 /*loader*/
 .section {
-  position: absolute;
-  height: 100px;
-  min-height: 100%;
-  min-width: 100%;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
   z-index: 1;
-  background-color: rgba(141, 155, 155, 0.8);
+  background-color: rgba(141, 155, 155, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: disparution 6s forwards;
 }
 
+@keyframes disparution {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  95% {
+    opacity: 1;
+    display: block;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
 .loader {
   width: 50px;
   height: 50px;
