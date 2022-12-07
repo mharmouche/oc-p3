@@ -167,6 +167,7 @@ header h1 {
 }
 .fonctionnement .etapes .etape .nombre {
   background-color: #9356DC;
+  color: #fff;
   width: 30px;
   height: 30px;
   border-radius: 100%;

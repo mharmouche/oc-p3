@@ -214,6 +214,7 @@ main{
             background-color: $couleur_grise_claire;
             border-radius: 20px;
             justify-content: space-between;
+            overflow: hidden; 
             .ndp{
                 width: 100%;
                 padding: 10px;

@@ -267,6 +267,7 @@ main .ndpi-list .ndpi {
   background-color: rgb(246, 246, 246);
   border-radius: 20px;
   justify-content: space-between;
+  overflow: hidden;
 }
 main .ndpi-list .ndpi .ndp {
   width: 100%;
