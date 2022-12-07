@@ -220,6 +220,7 @@ main{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                overflow: hidden;
             }
             .dp{
                 display: flex;
@@ -229,7 +230,7 @@ main{
                 //
                 overflow: hidden;
                 .detail{
-                    //width: 80%;
+                    //width: 80%; 
                     text-overflow: ellipsis;
                     overflow: hidden;
                     white-space:nowrap;
@@ -242,87 +243,42 @@ main{
             .prix{
                 font-weight: bold;
             }
-            // rotation + slide
-            @keyframes similitude {
-                0%{
-                    transform: rotate(0deg);
-                    transform: translateX(50px);
-                    //transform: translate(50px, 0);
 
-                };
-                100%{
-                    transform: rotate(0deg);
-                    transform: translateX(0px);
-                    //transform: translate(0, 0);
-                }
-                
-            }
             .choix{
-                //transform: translateX(-50%, -50%);
-                //transition: all 1s;
-                //width: 0;
-                //width: 0px;
-                //right : -50 px;
-                display: none;
-                //width: 50px;
-                
+                width: 0;
+                overflow: hidden;
+                align-content: center;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                font-weight: bolder;
+                border-top-right-radius: 20px;        
+                border-bottom-right-radius: 20px; 
+                background-color: $couleur-tertiaire;
+                display: flex;
+                transition: width 0.5s;
 
-                            
-                i{
+                i {
                     font-size: 25px;
-                    /*padding: 10px;*/
-                    display: none;
-                    //width: 0px;
-                    /*transform: rotate(0deg);
-                    transition-property: transform;*/
-                    /*transition-duration: 3000ms; */
-                    //transform: rotate(0deg);
-                    //transition: all 1s;
+                    display: flex;
+                    color: white;
+                    height: 100%;
+                    align-content: center;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: center;
+                    font-weight: bolder;    
                 }
-
             }
                
             &:hover{
                 
                 .choix{
-                    animation-duration: 0.5s;
-                    animation-name: similitude;
-
-
-                    display: flex;
                     width: 50px;
-                    //right : 0 px;
-                    align-content: center;
-                    align-items: center;
-                    text-align: center;
-                    justify-content: center;
-                    font-weight: bolder;
-                    border-top-right-radius: 20px;        
-                    border-bottom-right-radius: 20px; 
-                    background-color: $couleur-tertiaire;
 
-                    
-                    //transform: translateX(0);
-
-
-                    i{
+                    i {
                         animation-duration: 0.5s;
                         animation-name: rotation;
-                        //transform: rotate(720deg);
-
-                        display: flex;
-                        color: white;
-                        height: 100%;
-                        //border-top-right-radius: 20px;        
-                        //border-bottom-right-radius: 20px; 
-                        align-content: center;
-                        align-items: center;
-                        text-align: center;
-                        justify-content: center;
-                        font-weight: bolder;
-                        //transform: rotate(0deg);
-                        /*transform: rotate(90deg);*/                        
-
                     }
                 }
         } 
@@ -345,6 +301,8 @@ main{
     .boutton{
         display: flex;
         justify-content: center;
+        margin-top: 20px;
+
         button{
             padding: 20px;
             border-radius: 40px;
@@ -353,7 +311,8 @@ main{
             opacity: 0.8;
             //box-shadow: 10px 10px 10px gainsboro;
             color: white;
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);                
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);     
+            transition: box-shadow 1s, opacity 1s;           
             //box-shadow: 10px 5px 5px $couleur_noire_claire;
             &:hover{
                 box-shadow: 10px 5px 5px $couleur_noire_claire;

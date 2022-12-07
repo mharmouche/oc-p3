@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: disparution 6s forwards;
+  animation: disparution 2s forwards;
 }
 
 @keyframes disparution {
@@ -131,6 +131,7 @@ header h1 {
   opacity: 0.8;
   color: white;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: box-shadow 1s;
   width: 66%;
 }
 .recherche .boutton button:hover {

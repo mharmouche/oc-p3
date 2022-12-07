@@ -29,7 +29,7 @@ $font-defaut : serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: disparution 6s forwards;
+    animation: disparution 2s forwards;
 }
 
 @keyframes disparution {// disparution du loader
@@ -148,6 +148,8 @@ header{
             //box-shadow: 10px 10px 10px gainsboro;
             color: white;
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transition: box-shadow 1s;
+
             &:hover{
                 box-shadow: 10px 5px 5px $couleur_noire_claire;
                 background : $couleur_degrade;

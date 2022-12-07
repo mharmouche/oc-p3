@@ -274,6 +274,7 @@ main .ndpi-list .ndpi .ndp {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 main .ndpi-list .ndpi .dp {
   display: flex;
@@ -293,32 +294,9 @@ main .ndpi-list .ndpi .nom {
 main .ndpi-list .ndpi .prix {
   font-weight: bold;
 }
-@keyframes similitude {
-  0% {
-    transform: rotate(0deg);
-    transform: translateX(50px);
-  }
-  100% {
-    transform: rotate(0deg);
-    transform: translateX(0px);
-  }
-}
 main .ndpi-list .ndpi .choix {
-  display: none;
-}
-main .ndpi-list .ndpi .choix i {
-  font-size: 25px;
-  /*padding: 10px;*/
-  display: none;
-  /*transform: rotate(0deg);
-  transition-property: transform;*/
-  /*transition-duration: 3000ms; */
-}
-main .ndpi-list .ndpi:hover .choix {
-  animation-duration: 0.5s;
-  animation-name: similitude;
-  display: flex;
-  width: 50px;
+  width: 0;
+  overflow: hidden;
   align-content: center;
   align-items: center;
   text-align: center;
@@ -327,10 +305,11 @@ main .ndpi-list .ndpi:hover .choix {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #99E2D0;
+  display: flex;
+  transition: width 0.5s;
 }
-main .ndpi-list .ndpi:hover .choix i {
-  animation-duration: 0.5s;
-  animation-name: rotation;
+main .ndpi-list .ndpi .choix i {
+  font-size: 25px;
   display: flex;
   color: white;
   height: 100%;
@@ -339,7 +318,13 @@ main .ndpi-list .ndpi:hover .choix i {
   text-align: center;
   justify-content: center;
   font-weight: bolder;
-  /*transform: rotate(90deg);*/
+}
+main .ndpi-list .ndpi:hover .choix {
+  width: 50px;
+}
+main .ndpi-list .ndpi:hover .choix i {
+  animation-duration: 0.5s;
+  animation-name: rotation;
 }
 main a {
   text-decoration: none;
@@ -351,6 +336,7 @@ main i {
 main .boutton {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 main .boutton button {
   padding: 20px;
@@ -360,6 +346,7 @@ main .boutton button {
   opacity: 0.8;
   color: white;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: box-shadow 1s, opacity 1s;
   width: 66%;
 }
 main .boutton button:hover {
